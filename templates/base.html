@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+<title>{% block head_title %}music play List{% endblock head_title %}</title>
+{% include 'snippets/css.html' %}
+{% block style %}{% endblock style %} 
+</head>
+<body>
+<!-- {% include 'snippets/nav.html' %} -->
+{% if messages %}
+<div class="alert messages text-center">
+    {% for message in messages %}
+    <b>{{ message }}</b><br/>
+    {% endfor %}
+
+</div>
+{% endif %}
+
+<div class='container'>
+{% block content %}{% endblock content %}
+</div>
+
+
+{% include 'snippets/js.html' %}
+{% block scripts %}{% endblock scripts %} 
+</body>
+</html>
